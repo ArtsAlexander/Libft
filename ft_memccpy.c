@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 12:42:31 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/08 17:08:08 by aarts            ###   ########.fr       */
+/*   Created: 2021/04/08 12:53:49 by aarts             #+#    #+#             */
+/*   Updated: 2021/04/08 17:05:01 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n);
+void		*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
+	unsigned char	*dest;
+	unsigned char	*source;
+
+	dest = (unsigned char *)dst;
+	source = (unsigned char *)src;
 	while (n--)
 	{
-		*s = '\0';
-		*s++;
+		*dest = *source;
+		if (*source == (unsigned char)c)
+			return((void *)(dest + 1));
+		*dest++;
+		*source++;
 	}
+	return(0);
 }

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 12:42:31 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/08 17:08:08 by aarts            ###   ########.fr       */
+/*   Created: 2021/04/08 12:53:49 by aarts             #+#    #+#             */
+/*   Updated: 2021/04/08 16:22:30 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n);
+void		*ft_memcpy(void *dst, const void *src, size_t n)
 {
+	char	*dest;
+	const char	*source;
+
+	dest = dst;
+	source = src;
 	while (n--)
-	{
-		*s = '\0';
-		*s++;
-	}
+		*dest++ = *source++;
+	return(dst);
 }
