@@ -6,33 +6,21 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 13:24:33 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/08 14:11:47 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/12 13:20:35 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	int i;
-	int u;
-	void *temp;
+#include libft.h
 
-	i = 0;
-	u = n;
-	while (n > 0)
-	{
-		*temp = *src;
-		*temp++;
-		*src++;
-		n--;
-	}
-	n = u;
-	while (n > 0)
-		*dest = *temp;
-		*dest++;
-		*temp++;
-		n--;
-	}
-	
-	
+void	*ft_memmove(void *dst, const void *src, size_t n)
+{
+	if (dst == 0)
+		return (0);
+	if (src <= dst)
+		while (n--)
+			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
+	else
+		ft_memcpy(dst, src, n);
+	return ((void *)dst);
 	return(dst);
 }

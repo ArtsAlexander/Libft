@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 11:50:36 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/12 14:54:34 by aarts            ###   ########.fr       */
+/*   Created: 2021/04/12 13:59:11 by aarts             #+#    #+#             */
+/*   Updated: 2021/04/12 14:03:37 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t count;
+	unsigned char *temp;
 
-	count = 0;
-	while (str[count] != '\0')
+	temp = s;
+	while (n--)
 	{
-		count++;
+		if (*temp == (unsigned char)c)
+			return(temp)
+		*temp++;
 	}
-	return (count);
+	return(0);
 }

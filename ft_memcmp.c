@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 11:50:36 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/12 14:54:34 by aarts            ###   ########.fr       */
+/*   Created: 2021/04/12 14:06:48 by aarts             #+#    #+#             */
+/*   Updated: 2021/04/12 14:21:52 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
+int 	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t count;
-
-	count = 0;
-	while (str[count] != '\0')
+	unsigned const char *string1;
+	unsigned const char *string2;
+	
+	string1 = (unsigned const char *)s1;
+	string2 = (unsigned const char *)s2;
+	while (n--)
 	{
-		count++;
+		if (*string1 == *string2)
+		{
+			*string1++;
+			*string2++;
+		}
+		else 
+			return(*string1 - *string2);
 	}
-	return (count);
+	return(0);
 }

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 11:50:36 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/12 14:54:34 by aarts            ###   ########.fr       */
+/*   Created: 2021/04/12 14:31:03 by aarts             #+#    #+#             */
+/*   Updated: 2021/04/12 15:02:54 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
-{
-	size_t count;
+#include "libft.h"
 
-	count = 0;
-	while (str[count] != '\0')
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	if (!size)
+		return(ft_strlen(src));
+	while (--size)
 	{
-		count++;
+		*dst = *src;
+		*dst++;
+		*src++;
 	}
-	return (count);
+	*dst = 0;
+	return(ft_strlen(src));
 }
