@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/04/13 16:22:10 by aarts            ###   ########.fr        #
+#    Updated: 2021/04/13 19:12:48 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,8 @@ FILES =	ft_bzero.c			\
 		ft_strlen.c			\
 		ft_strchr.c 		\
 		ft_strrchr.c 		\
+		ft_strnstr.c		\
+		ft_strncmp.c 		\
 		
 
 OBJ = $(FILES:.c=.o)
