@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 12:53:49 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/14 15:03:04 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/14 16:30:50 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
+	if (dst == 0 && src == 0)
+		return (0);
 	while (n--)
 		*(char *)dst++ = *(char *)src++;
 	return (dst);

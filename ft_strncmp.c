@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 18:08:50 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/14 16:07:24 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/14 16:38:10 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			s2++;
 		}
 		else
-			return (*s1 - *s2);
+			return ((unsigned char)*s1 - (unsigned char)*s2);
 	}
 	return (0);
 }
 
 // int main()
 // {
-// 	printf("%d\n", ft_strncmp("Wie wat waar waarom", "Wie wat waar Waarom", 25));
-// 	printf("%d", strncmp("Wie wat waar waarom", "Wie wat waar Waarom", 25));
+// 	printf("%d\n", ft_strncmp("w", "W", 25));
+// 	printf("%d", strncmp("w", "W", 25));
 // }

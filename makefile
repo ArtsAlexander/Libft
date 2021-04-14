@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/04/14 15:43:59 by aarts            ###   ########.fr        #
+#    Updated: 2021/04/14 16:54:37 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ FILES =	ft_bzero.c			\
 OBJ = $(FILES:.c=.o)
 
 $(NAME):
-		@$(CC) $(CFLAGS) -c $(FILES) -I ./includes
+		@$(CC) $(CFLAGS) -c $(FILES) -I .
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
 		

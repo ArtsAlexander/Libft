@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 13:40:52 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/14 16:05:28 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/14 17:01:23 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s)
 {
 	char	*new;
 
-	new = (char *)malloc(ft_strlen(s) + 1);
+	new = (char *) malloc(ft_strlen(s) + 1);
 	if (!new)
 		return (0);
 	while (*s)
