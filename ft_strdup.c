@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 18:08:50 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/14 11:35:02 by aarts            ###   ########.fr       */
+/*   Created: 2021/04/14 13:40:52 by aarts             #+#    #+#             */
+/*   Updated: 2021/04/14 14:09:36 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char    *ft_strdup(const char *s)
 {
-	while(*s1 && *s2 && n--)
-	{
-		if (*s1 == *s2)
-		{
-			s1++;
-			s2++;
-		}
-		else
-			return (*s1 - *s2);
-	}
-	return (0);
-}
+    char *new;
 
-// int main()
-// {
-//	printf("%d\n", ft_strncmp("Hi my name is Jeff", "Hi my name is jeff", 20));
-//	printf("%d", strncmp("Hi my name is Jeff", "Hi my name is jeff", 20));
-// }
+    new = (char *)malloc(ft_strlen(s)+1);
+	if (!new)
+        return(0);
+    while (*s)
+        *new++ = *s++;
+    *new = 0;
+    return (new);
+}
