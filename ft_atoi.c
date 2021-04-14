@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 11:36:30 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/14 12:19:40 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/14 16:06:46 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,5 +163,4 @@ int main(void)
 // 	printf("t_value = %s \n", test11);
 // 	printf("%d \n",ft_atoi(test11));
 //     printf("SYS %d\n",atoi(test11));
-
 // }

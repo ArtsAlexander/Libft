@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/04/14 15:04:24 by aarts            ###   ########.fr        #
+#    Updated: 2021/04/14 15:43:59 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,6 @@ NAME = libft.a
 CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
-
-INCLUDE = libft.h
 
 FILES =	ft_bzero.c			\
 		ft_memccpy.c 		\
@@ -45,22 +43,17 @@ FILES =	ft_bzero.c			\
 
 OBJ = $(FILES:.c=.o)
 
-
+$(NAME):
+		@$(CC) $(CFLAGS) -c $(FILES) -I ./includes
+		@ar rc $(NAME) $(OBJ)
+		@ranlib $(NAME)
+		
 all: $(NAME)
 
-$(NAME):
-		$(CC) $(CFLAGS) -c $(FILES) -I .
-		ar rc $(NAME) $(OBJ)
-		ranlib $(NAME)
-
-
 clean:
-		rm -f $(OBJ)
+		@rm -f $(OBJ)
 
-fclean:
-		clean
-		rm -f $(NAME)
+fclean:	clean
+		@rm -f $(NAME)
 
-re:
-		fclean
-		all
+re:		fclean all

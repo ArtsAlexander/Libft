@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 15:10:18 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/14 14:24:26 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/14 15:20:23 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ char					*strchr(const char *s, int c);
 char					*strrchr(const char *s, int c);
 char					*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char    				*ft_strdup(const char *s);
-
 
 #endif
