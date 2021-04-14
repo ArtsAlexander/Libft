@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/04/13 19:12:48 by aarts            ###   ########.fr        #
+#    Updated: 2021/04/14 15:04:24 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,16 @@ FILES =	ft_bzero.c			\
 		ft_strrchr.c 		\
 		ft_strnstr.c		\
 		ft_strncmp.c 		\
-		
+		ft_atoi.c			\
+		ft_calloc.c			\
+		ft_isalnum.c 		\
+		ft_isalpha.c		\
+		ft_isascii.c		\
+		ft_isdigit.c		\
+		ft_isprint.c		\
+		ft_tolower.c		\
+		ft_toupper.c		\
+		ft_strdup.c			\
 
 OBJ = $(FILES:.c=.o)
 
@@ -40,7 +49,7 @@ OBJ = $(FILES:.c=.o)
 all: $(NAME)
 
 $(NAME):
-		$(CC) $(CFLAGS) -c $(FILES)
+		$(CC) $(CFLAGS) -c $(FILES) -I .
 		ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
 

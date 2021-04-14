@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 16:06:39 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/13 16:13:48 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/14 15:16:58 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == c)
-			return(s);
-		*s++;
+			return((char *)s);
+		s++;
 	}
 	if (*s == 0)
-		return (s);
+		return ((char *)s);
 	return (0);
 }
