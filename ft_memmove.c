@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 13:24:33 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/13 15:47:58 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/19 16:06:24 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	if (dst == 0)
+	if (!dst && !src)
 		return (0);
 	if (src <= dst)
 		while (n--)
