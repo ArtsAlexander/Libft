@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 16:06:39 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/19 16:30:12 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/21 16:21:32 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	pointer = (char *)s;
 	while (*pointer)
 	{
-		if (*pointer == c)
+		if (*pointer == (char) c)
 			return (pointer);
 		pointer++;
 	}
-	if (*pointer == 0 && c == 0)
+	if (*pointer == 0 && (char) c == 0)
 		return (pointer);
 	return (0);
 }

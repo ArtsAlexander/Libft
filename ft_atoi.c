@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 11:36:30 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/19 16:30:27 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/21 16:01:06 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_space(char c)
 {
-	if (c == ' ' || c == '\f' || c == '\r' ||
-		c == '\n' || c == '\t' || c == '\v')
+	if (c == ' ' || c == '\f' || c == '\r'
+		|| c == '\n' || c == '\t' || c == '\v')
 		return (1);
 	return (0);
 }
 
 int	ft_check(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (ft_space(str[i]) == 1)
@@ -36,8 +36,8 @@ int	ft_check(const char *str)
 
 int	ft_atoi(const char *str)
 {
-	int sign;
-	int a;
+	int	sign;
+	int	a;
 
 	sign = 1;
 	a = 0;
