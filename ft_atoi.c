@@ -12,53 +12,32 @@
 
 #include "libft.h"
 
-int	ft_space(char c)
-{
-	if (c == ' ' || c == '\f' || c == '\r'
-		|| c == '\n' || c == '\t' || c == '\v')
-		return (1);
-	return (0);
-}
-
-int	ft_check(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (ft_space(str[i]) == 1)
-		i++;
-	while ((str[i] == '-') || (str[i] == '+'))
-		i++;
-	if ((str[i] >= '0') && (str[i] <= '9'))
-		return (1);
-	return (0);
-}
-
 int	ft_atoi(const char *str)
 {
 	int	sign;
-	int	a;
+	int	i;
+	int	num;
 
 	sign = 1;
-	a = 0;
-	while (ft_check(str) == 0)
-		return (0);
-	while (ft_space(*str) == 1)
-		str++;
-	while ((*str == '+') || (*str == '-'))
+	i = 0;
+	num = 0;
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
+			|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (*str == '-')
+		if (str[i] == '-')
 			sign *= -1;
-		str++;
+		i++;
 	}
-	while ((*str >= '0') && (*str <= '9'))
-		str++;
-	str--;
-	while ((*str >= '0') && (*str <= '9'))
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		a += (*str - '0') * sign;
-		str--;
-		sign *= 10;
+		num = num * 10 + (str[i] - '0');
+		if ((num * sign) > 2147483647)
+			return (-1);
+		else if ((num * sign) < -2147483648)
+			return (0);
+		i++;
 	}
-	return (a);
+	return (num * sign);
 }

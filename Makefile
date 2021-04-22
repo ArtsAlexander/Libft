@@ -50,6 +50,10 @@ $(NAME):
 		
 all: $(NAME)
 
+so:
+		$(CC) -fPIC $(CFLAGS) $(SRC)
+		gcc -shared -o libft.so $(OBJ)
+
 clean:
 		@rm -f $(OBJ)
 
