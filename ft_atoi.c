@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 11:36:30 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/21 16:01:06 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/22 18:21:23 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	i;
-	int	num;
+	int		sign;
+	int		i;
+	long	num;
 
 	sign = 1;
 	i = 0;
@@ -39,5 +39,5 @@ int	ft_atoi(const char *str)
 			return (0);
 		i++;
 	}
-	return (num * sign);
+	return ((int)num * sign);
 }

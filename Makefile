@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/04/14 16:54:37 by aarts            ###   ########.fr        #
+#    Updated: 2021/04/22 18:23:13 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,10 +49,6 @@ $(NAME):
 		@ranlib $(NAME)
 		
 all: $(NAME)
-
-so:
-		$(CC) -fPIC $(CFLAGS) $(SRC)
-		gcc -shared -o libft.so $(OBJ)
 
 clean:
 		@rm -f $(OBJ)
