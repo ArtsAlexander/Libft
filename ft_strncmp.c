@@ -14,9 +14,11 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
+	if (!s1 && !s2)
+		return (0);
 	while (n--)
 	{
-		if (*s1 == *s2 && *s1 && *s2)
+		if (*s1 == *s2 && s1 && s2)
 		{
 			s1++;
 			s2++;
@@ -26,9 +28,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	printf("%d\n", ft_strncmp("w", "W", 25));
-// 	printf("%d", strncmp("w", "W", 25));
-// }
