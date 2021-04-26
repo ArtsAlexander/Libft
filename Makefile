@@ -16,7 +16,7 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-FILES =	ft_bzero.c			\
+SRC =	ft_bzero.c			\
 		ft_memccpy.c 		\
 		ft_memchr.c 		\
 		ft_memcmp.c			\
@@ -41,14 +41,18 @@ FILES =	ft_bzero.c			\
 		ft_toupper.c		\
 		ft_strdup.c			\
 
-OBJ = $(FILES:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 $(NAME):
-		@$(CC) $(CFLAGS) -c $(FILES) -I .
+		@$(CC) $(CFLAGS) -c $(SRC) -I .
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
 		
 all:	$(NAME)
+
+so:
+		@$(CC) -fPIC $(CFLAGS) $(SRC)
+		@gcc -shared -o libft.so $(OBJ)
 
 clean:
 		@rm -f $(OBJ)

@@ -33,9 +33,9 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		num = num * 10 + (str[i] - '0');
-		if (i >= 19 || num > __LONG_LONG_MAX__ && sign == 1)
+		if ((i >= 19 || num > __LONG_LONG_MAX__) && sign == 1)
 			return (-1);
-		else if (i >= 19 || num > __LONG_LONG_MAX__ && sign == -1)
+		else if ((i >= 19 || num > __LONG_LONG_MAX__) && sign == -1)
 			return (0);
 		i++;
 	}
