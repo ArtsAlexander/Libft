@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 16:33:42 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/27 18:16:14 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/27 18:21:32 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	size_t	t_len;
-	
+
 	t_len = 0;
 	if (s1 && !s2)
 		return (ft_strdup(s1));
