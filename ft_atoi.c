@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 11:36:30 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/27 16:10:31 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/27 16:30:52 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,14 @@ int	ft_atoi(const char *str)
 	unsigned long long	num;
 
 	sign = 1;
-	i = 0;
 	num = 0;
 	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v'
 		|| *str == '\f' || *str == '\r')
 		str++;
 	if (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
+		if (*str++ == '-')
 			sign *= -1;
-		str++;
-	}
+	i = 0;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		num = num * 10 + (str[i] - '0');

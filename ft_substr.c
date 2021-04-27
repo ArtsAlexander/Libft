@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 14:24:15 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/27 16:08:09 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/27 16:21:12 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*str;
 
 	str = malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (0);
-	if (!s)
-		return (0);
+	if (!str || !s)
+		return (NULL);
 	s_len = ft_strlen(s);
 	if (s_len < start)
 	{
