@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 16:06:39 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/27 14:25:12 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/28 19:09:16 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (*pointer == 0 && (char) c == 0)
 		return (pointer);
-	return (0);
+	return (NULL);
 }

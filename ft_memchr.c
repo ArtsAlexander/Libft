@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 13:59:11 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/27 14:25:05 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/28 19:10:37 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (temp);
 		temp++;
 	}
-	return (0);
+	return (NULL);
 }
