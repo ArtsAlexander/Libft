@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 15:10:18 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/27 18:38:12 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/29 17:22:08 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strdup(const char *s);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strtrim(char const *s1, char const *set);
 
 #endif
