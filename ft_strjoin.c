@@ -6,13 +6,13 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 16:33:42 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/28 19:14:22 by aarts            ###   ########.fr       */
+/*   Updated: 2021/04/29 15:17:21 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcat_join(char *str, char const*s1, char const *s2)
+static char	*strcat_join(char *str, char const*s1, char const *s2)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -41,7 +41,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str = malloc(sizeof(char) * t_len);
 		if (!str)
 			return (NULL);
-		ft_strcat_join(str, s1, s2);
+		strcat_join(str, s1, s2);
 		return (str);
 	}
 	return (NULL);
