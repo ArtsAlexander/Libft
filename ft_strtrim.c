@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static unsigned int	char_in_set(char c, const char *set)
 {
@@ -44,10 +43,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return(NULL);
 	str_size = i - str_start + 1;
 	return (ft_substr(s1, str_start, str_size));
-}
-
-int main()
-{
-	puts(NULL);
-	// printf("%s\n", ft_strtrim("  Salut Coucou  ", NULL));
 }
