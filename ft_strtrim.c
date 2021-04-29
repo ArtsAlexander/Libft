@@ -23,7 +23,6 @@ static unsigned int	char_in_set(char c, const char *set)
 	return (0);
 }
 
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t		i;
