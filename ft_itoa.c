@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 21:38:59 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/29 22:15:30 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/05 19:17:12 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 	char	*str;
 	long	nbr;
 	int		i;
-	
+
 	i = 0;
 	str = malloc(sizeof(char) * ft_size(n) + 1);
 	if (!str)

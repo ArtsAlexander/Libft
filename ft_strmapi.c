@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:17:40 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/05 16:02:30 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/05 19:15:37 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;
 	unsigned int	i;
-	
+
 	if (!s || !f)
 		return (NULL);
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
