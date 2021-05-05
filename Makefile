@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.s19.be>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/05/05 18:45:48 by aarts            ###   ########.fr        #
+#    Updated: 2021/05/05 19:09:57 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRC =	ft_bzero.c			\
 		ft_putstr_fd.c		\
 		ft_putendl_fd.c		\
 		ft_putnbr_fd.c		\
+		ft_split.c			\
 
 
 OBJ = $(SRC:.c=.o)
