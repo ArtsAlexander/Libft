@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
+/*   By: aarts <aarts@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 14:53:11 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/29 17:13:15 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/04 15:58:25 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	if (str_start == i)
 		return(NULL);
-	str_size = i - str_start + 1;
+	str_size = (i - str_start) + 1;
 	return (ft_substr(s1, str_start, str_size));
 }
