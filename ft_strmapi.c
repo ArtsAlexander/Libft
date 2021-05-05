@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 14:06:48 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/04 19:44:09 by aarts            ###   ########.fr       */
+/*   Created: 2021/05/05 15:17:40 by aarts             #+#    #+#             */
+/*   Updated: 2021/05/05 16:02:30 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int 	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned const char	*string1;
-	unsigned const char	*string2;
-
-	string1 = (unsigned const char *)s1;
-	string2 = (unsigned const char *)s2;
-	while (n--)
+	char			*str;
+	unsigned int	i;
+	
+	if (!s || !f)
+		return (NULL);
+	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		if (*string1 == *string2)
-		{
-			string1++;
-			string2++;
-		}
-		else
-			return (*string1 - *string2);
+		str[i] = (*f)(i, s[i]);
+		i++;
 	}
-	return (0);
+	return (str);
 }
