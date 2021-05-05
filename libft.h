@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 15:10:18 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/05 15:14:22 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/05 19:08:14 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,14 @@ char		*ft_strdup(const char *s);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strtrim(char const *s1, char const *set);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void		ft_bzero(void *s, size_t n);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
+void		ft_putendl_fd(char *s, int fd);
+
 void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);

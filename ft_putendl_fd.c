@@ -6,7 +6,14 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 18:04:30 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/05 18:08:55 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/05 19:07:09 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}
