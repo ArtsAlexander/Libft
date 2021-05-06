@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 15:10:18 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/05 19:15:15 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/06 18:11:11 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char		**ft_split(char const *s, char c);
+char		*ft_itoa(int n);
 
 void		ft_bzero(void *s, size_t n);
 void		ft_putchar_fd(char c, int fd);

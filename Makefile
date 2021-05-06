@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.s19.be>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/05/05 19:09:57 by aarts            ###   ########.fr        #
+#    Updated: 2021/05/06 18:11:19 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC =	ft_bzero.c			\
 		ft_strnstr.c		\
 		ft_strncmp.c 		\
 		ft_atoi.c			\
+		ft_itoa.c			\
 		ft_calloc.c			\
 		ft_isalnum.c 		\
 		ft_isalpha.c		\
@@ -48,7 +49,6 @@ SRC =	ft_bzero.c			\
 		ft_putstr_fd.c		\
 		ft_putendl_fd.c		\
 		ft_putnbr_fd.c		\
-		ft_split.c			\
 
 
 OBJ = $(SRC:.c=.o)

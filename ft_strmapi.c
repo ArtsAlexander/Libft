@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:17:40 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/05 19:15:37 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/06 18:10:53 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = (*f)(i, s[i]);
 		i++;
 	}
+	str[i] = 0;
 	return (str);
 }

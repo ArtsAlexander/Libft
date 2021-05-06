@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 11:50:36 by aarts             #+#    #+#             */
-/*   Updated: 2021/04/29 17:09:21 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/06 18:10:49 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	count;
 
 	count = 0;
-	while (s && s[count])
+	while (s[count])
 		count++;
 	return (count);
 }

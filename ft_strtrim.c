@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 14:53:11 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/05 19:17:02 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/06 18:11:00 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static unsigned int	char_in_set(char c, const char *set)
 {
-	while (set && *set)
+	while (*set)
 	{
 		if (c == *set)
 			return (1);
@@ -35,11 +35,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[i] && char_in_set(s1[i], set))
 		i++;
 	str_start = i;
-	i = ft_strlen(s1);
-	while (s1[i] && char_in_set(s1[i], set))
+	i = ft_strlen(s1) - 1;
+	while (i >= 0 && char_in_set(s1[i], set))
 		i--;
-	if (str_start == i)
-		return (NULL);
-	str_size = (i - str_start) + 1;
+	str_size = 1;
+	if (str_start != i && *s1)
+		str_size = (i - str_start) + 1;
 	return (ft_substr(s1, str_start, str_size));
 }
