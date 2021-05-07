@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 14:24:15 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/06 18:15:28 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/07 16:22:40 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		str[0] = '\0';
 		return (str);
 	}
-	str = malloc(sizeof(char) * len + 1);
+	if (s_len < len)
+		len = s_len;
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	i = 0;
-	while (i < len)
-	{
+	i = -1;
+	while (++i < len)
 		str[i] = s[start + i];
-		i++;
-	}
 	str[i] = 0;
 	return (str);
 }
