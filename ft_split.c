@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 19:09:18 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/10 14:36:05 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/10 14:46:05 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,13 @@ static char	**free_malloc(char **tab)
 
 static unsigned int	word_count(char const *s, char c)
 {
-	int	i;
-	int	words;
+	unsigned int	i;
+	unsigned int	words;
 	
 	i = 0;
 	words = 0;
+	while (s[i] && s[i] == c)
+		i++;
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -49,7 +51,7 @@ static unsigned int	word_count(char const *s, char c)
 	return (words);
 }
 
-static void	get_next_str(char **next_str, unsigned int *next_len, char c)
+static void	next_word(char **next_str, unsigned int *next_len, char c)
 {
 	unsigned int i;
 
@@ -60,7 +62,7 @@ static void	get_next_str(char **next_str, unsigned int *next_len, char c)
 		(*next_str)++;
 	while ((*next_str)[i])
 	{
-		if (*(next_str)[i] == c)
+		if ((*next_str)[i] == c)
 			return ;
 		(*next_len)++;
 		i++;
@@ -95,22 +97,4 @@ char	**ft_split(char const *s, char c)
 	}
 	tab[i] = NULL;
 	return(tab);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	char	**tab;
-	unsigned int	i;
-
-	i = 0;
-	tab = ft_split("ccacbcdcecff", 'c');
-	if (!tab[0])
-		ft_putendl_fd("ok\n", 1);
-	while (tab[i] != NULL)
-	{
-		ft_putendl_fd(tab[i], 1);
-		i++;
-	}
 }
