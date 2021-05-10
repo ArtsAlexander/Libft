@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 19:09:18 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/10 14:46:05 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/10 14:48:23 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static char	**free_malloc(char **tab)
 {
 	unsigned int	i;
-	
+
 	i = 0;
 	while (tab[i])
 	{
@@ -23,14 +23,14 @@ static char	**free_malloc(char **tab)
 		i++;
 	}
 	free(tab);
-	return(NULL);
+	return (NULL);
 }
 
 static unsigned int	word_count(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	words;
-	
+
 	i = 0;
 	words = 0;
 	while (s[i] && s[i] == c)
@@ -42,7 +42,7 @@ static unsigned int	word_count(char const *s, char c)
 			words++;
 			while (s[i] && s[i] == c)
 				i++;
-			continue;
+			continue ;
 		}
 		i++;
 	}
@@ -53,7 +53,7 @@ static unsigned int	word_count(char const *s, char c)
 
 static void	next_word(char **next_str, unsigned int *next_len, char c)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	*next_str += *next_len;
 	*next_len = 0;
@@ -76,13 +76,13 @@ char	**ft_split(char const *s, char c)
 	unsigned int	words;
 	char			**tab;
 	char			*next_str;
-	
+
 	if (!s)
-		return(NULL);
+		return (NULL);
 	words = word_count(s, c);
 	tab = malloc(sizeof(char *) * (words + 1));
 	if (!tab)
-		return(NULL);
+		return (NULL);
 	i = 0;
 	next_str = (char *)s;
 	next_len = 0;
@@ -91,10 +91,10 @@ char	**ft_split(char const *s, char c)
 		get_next_str(&next_str, &next_len, c);
 		tab[i] = malloc(sizeof(char) * (next_len + 1));
 		if (!tab[i])
-			return(free_malloc(tab));
+			return (free_malloc(tab));
 		ft_strlcpy(tab[i], next_str, next_len + 1);
 		i++;
 	}
 	tab[i] = NULL;
-	return(tab);
+	return (tab);
 }
