@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 19:09:18 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/10 14:48:23 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/10 14:52:13 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,17 +83,16 @@ char	**ft_split(char const *s, char c)
 	tab = malloc(sizeof(char *) * (words + 1));
 	if (!tab)
 		return (NULL);
-	i = 0;
+	i = -1;
 	next_str = (char *)s;
 	next_len = 0;
-	while (i < words)
+	while (++i < words)
 	{
-		get_next_str(&next_str, &next_len, c);
+		next_word(&next_str, &next_len, c);
 		tab[i] = malloc(sizeof(char) * (next_len + 1));
 		if (!tab[i])
 			return (free_malloc(tab));
 		ft_strlcpy(tab[i], next_str, next_len + 1);
-		i++;
 	}
 	tab[i] = NULL;
 	return (tab);
