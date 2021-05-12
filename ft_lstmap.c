@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 18:55:22 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/12 20:57:55 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/12 21:16:17 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!new_node)
 		{
 			ft_lstclear(&new_lst, del);
-			ft_lstclear(&lst, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_lst, new_node);
