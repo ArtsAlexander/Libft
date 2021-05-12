@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 18:55:22 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/12 19:32:02 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/12 19:40:49 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!f || !del)
 		return (NULL);
 	new_lst = NULL;
-	new_node = NULL;
 	while (lst)
 	{
-		new_node = ft_lstnew(f(lst->content));
+		new_node = ft_lstnew((*f)(lst->content));
 		if (!new_node)
 		{
 			ft_lstclear(&new_lst, del);
