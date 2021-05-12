@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 18:52:13 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/12 21:14:11 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/12 21:22:05 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst)
 	{
-		tmp = (*lst)->next;
 		del((*lst)->content);
-		*lst = tmp;
+		tmp = *lst;
+		*lst = tmp->next;
 		free(tmp);
-		// del((*lst)->content);
-		// tmp = *lst;
-		// *lst = tmp->next;
-		// free(tmp);
 	}
 	*lst = NULL;
 }
