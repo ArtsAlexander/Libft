@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.s19.be>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/05/12 18:59:42 by aarts            ###   ########.fr        #
+#    Updated: 2021/05/12 22:48:18 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ NAME = libft.a
 CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
+
+CFLAGS += -I .
 
 SRC =	ft_bzero.c			\
 		ft_memccpy.c 		\
@@ -66,9 +68,9 @@ OBJ = $(SRC:.c=.o)
 B_OBJ = $(BONUS:.c=.o)
 
 $(NAME):
-		@$(CC) $(CFLAGS) -c $(SRC) -I .
-		@ar rc $(NAME) $(OBJ)
-		@ranlib $(NAME)
+		@$(CC) $(CFLAGS) -c $(SRC)
+		@ar rcs $(NAME) $(OBJ)
+
 		
 all:	$(NAME)
 
@@ -81,8 +83,7 @@ fclean:	clean
 re:		fclean all
 
 bonus:
-		@$(CC) $(CFLAGS) -c $(SRC) $(BONUS) -I .
-		@ar rc $(NAME) $(OBJ) $(B_OBJ)
-		@ranlib $(NAME)
+		@$(CC) $(CFLAGS) -c $(SRC) $(BONUS)
+		@ar rcs $(NAME) $(OBJ) $(B_OBJ)
 
 .PHONY:	all clean fclean re bonus
