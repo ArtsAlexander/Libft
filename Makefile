@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.s19.be>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/05/12 18:43:14 by aarts            ###   ########.fr        #
+#    Updated: 2021/05/12 18:59:42 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,11 +72,6 @@ $(NAME):
 		
 all:	$(NAME)
 
-bonus:
-		@$(CC) $(CFLAGS) -c $(SRC) $(BONUS) -I .
-		@ar rc $(NAME) $(OBJ) $(B_OBJ)
-		@ranlib $(NAME)
-
 clean:
 		@rm -f $(OBJ) $(B_OBJ)
 
@@ -84,3 +79,10 @@ fclean:	clean
 		@rm -f $(NAME)
 
 re:		fclean all
+
+bonus:
+		@$(CC) $(CFLAGS) -c $(SRC) $(BONUS) -I .
+		@ar rc $(NAME) $(OBJ) $(B_OBJ)
+		@ranlib $(NAME)
+
+.PHONY:	all clean fclean re bonus
