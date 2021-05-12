@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 18:50:34 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/10 18:50:57 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/12 17:09:40 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	
+	if (!lst)
+		return ;
+	if (del)
+		del(lst->content);
+	free(lst);
 }

@@ -6,7 +6,7 @@
 #    By: aarts <aarts@student.s19.be>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 16:04:27 by aarts             #+#    #+#              #
-#    Updated: 2021/05/12 13:58:46 by aarts            ###   ########.fr        #
+#    Updated: 2021/05/12 18:43:14 by aarts            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,19 @@ SRC =	ft_bzero.c			\
 		ft_putnbr_fd.c		\
 		ft_split.c			\
 
+BONUS = ft_lstadd_back.c	\
+		ft_lstadd_front.c	\
+		ft_lstclear.c		\
+		ft_lstdelone.c		\
+		ft_lstiter.c		\
+		ft_lstlast.c		\
+		ft_lstmap.c			\
+		ft_lstnew.c			\
+		ft_lstsize.c		\
+
 OBJ = $(SRC:.c=.o)
+
+B_OBJ = $(BONUS:.c=.o)
 
 $(NAME):
 		@$(CC) $(CFLAGS) -c $(SRC) -I .
@@ -60,8 +72,13 @@ $(NAME):
 		
 all:	$(NAME)
 
+bonus:
+		@$(CC) $(CFLAGS) -c $(SRC) $(BONUS) -I .
+		@ar rc $(NAME) $(OBJ) $(B_OBJ)
+		@ranlib $(NAME)
+
 clean:
-		@rm -f $(OBJ)
+		@rm -f $(OBJ) $(B_OBJ)
 
 fclean:	clean
 		@rm -f $(NAME)

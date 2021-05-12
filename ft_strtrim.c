@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 14:53:11 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/06 18:11:00 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/12 18:41:40 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	str_start = i;
 	i = ft_strlen(s1) - 1;
-	while (i >= 0 && char_in_set(s1[i], set))
+	while ((int)i >= 0 && char_in_set(s1[i], set))
 		i--;
 	str_size = 1;
 	if (str_start != i && *s1)
