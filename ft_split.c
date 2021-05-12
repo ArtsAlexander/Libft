@@ -6,7 +6,7 @@
 /*   By: aarts <aarts@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 19:09:18 by aarts             #+#    #+#             */
-/*   Updated: 2021/05/12 13:49:12 by aarts            ###   ########.fr       */
+/*   Updated: 2021/05/12 14:05:46 by aarts            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ static unsigned int	word_count(char const *s, char c)
 	unsigned int	i;
 	unsigned int	words;
 
+	if (!*s)
+		return (0);
 	i = 0;
 	words = 0;
 	while (s[i] && s[i] == c)
